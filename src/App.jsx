@@ -216,7 +216,7 @@ export default function App() {
   const [adminPwd, setAdminPwd] = useState("");
   const [adminAuth, setAdminAuth] = useState(false);
 
-  const ADMIN_PWD = "raul2026"; // Cambia esto por tu contraseña
+  const ADMIN_PWD = import.meta.env.VITE_ADMIN_PASSWORD || "cambiar-esta-clave";
 
   const gadTotal = gad.every((v) => v !== null) ? gad.reduce((a, b) => a + b, 0) : null;
   const phqTotal = phq.every((v) => v !== null) ? phq.reduce((a, b) => a + b, 0) : null;
